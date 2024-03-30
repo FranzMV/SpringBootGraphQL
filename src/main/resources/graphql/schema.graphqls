@@ -5,10 +5,23 @@ type Query {
     findAllStudents : [Student]
 }
 
+# Queries de modificacion de datos
+type Mutation{
+    createStudent(inputStudent: InputStudent): Student
+}
+
 type Student {
     id:ID,
     name: String,
     lastName: String,
     age: Int
+}
+
+#Dato tipo de entrada
+input InputStudent{
+    name: String,
+    lastName: String,
+    age: Int,
+    courseId: String!
 }
 
