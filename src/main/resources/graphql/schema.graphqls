@@ -1,7 +1,8 @@
 
 # Query - Sirve solo para hacer consultas
 type Query {
-    findStudentById(studentId: String) : Student
+    findStudentById(studentId: String) : Student,
+    findAllStudents : [Student]
 }
 
 type Student {
@@ -10,3 +11,4 @@ type Student {
     lastName: String,
     age: Int
 }
+
