@@ -11,10 +11,12 @@ type Query {
 # Queries de modificacion de datos
 type Mutation{
     #Students mutations
-    createStudent(inputStudent: InputStudent): Student,
+    createStudent(inputStudent: InputStudent!): Student,
     deleteStudentById(studentId: String) : String
-
     #Courses mutations
+    createCourse(inputCourse: InputCourse!) :Course
+    deleteCourseById(courseId: String) :String
+
 }
 
 # Types
@@ -31,12 +33,15 @@ type Course {
     teacher: String
 }
 
-
-#Dato tipo de entrada
+#Datos tipo de entrada
 input InputStudent{
     name: String,
     lastName: String,
     age: Int,
     courseId: String!
 }
-
+input InputCourse{
+    name: String,
+    category: String,
+    teacher: String
+}
