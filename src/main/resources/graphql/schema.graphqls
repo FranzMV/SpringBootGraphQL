@@ -1,22 +1,36 @@
-
-# Query - Sirve solo para hacer consultas
 type Query {
+    #Students queries
     findStudentById(studentId: String) : Student,
     findAllStudents : [Student]
+
+    #Courses queries
+    findCourseById(courseId: String) :Course,
+    findAllCourses : [Course]
 }
 
 # Queries de modificacion de datos
 type Mutation{
+    #Students mutations
     createStudent(inputStudent: InputStudent): Student,
     deleteStudentById(studentId: String) : String
+
+    #Courses mutations
 }
 
+# Types
 type Student {
     id:ID,
     name: String,
     lastName: String,
     age: Int
 }
+type Course {
+    id: ID,
+    name: String,
+    category: String,
+    teacher: String
+}
+
 
 #Dato tipo de entrada
 input InputStudent{
