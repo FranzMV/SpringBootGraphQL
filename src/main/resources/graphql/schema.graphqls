@@ -7,7 +7,8 @@ type Query {
 
 # Queries de modificacion de datos
 type Mutation{
-    createStudent(inputStudent: InputStudent): Student
+    createStudent(inputStudent: InputStudent): Student,
+    deleteStudentById(studentId: String) : String
 }
 
 type Student {

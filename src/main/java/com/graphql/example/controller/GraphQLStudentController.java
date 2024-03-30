@@ -48,4 +48,10 @@ public class GraphQLStudentController {
 
         return student;
     }
+
+    @MutationMapping(name = "deleteStudentById")
+    public String deleteById(@Argument(name = "studentId") String id){
+        studentService.deleteById(Long.parseLong(id));
+        return "El estudiante con id: "+id+" ha sido eliminado";
+    }
 }
