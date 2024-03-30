@@ -1,0 +1,22 @@
+logging:
+    level:
+        org:
+            hibernate:
+                type: TRACE
+login:
+    level:
+        org:
+            hibernate:
+                SQL: DEBUG
+spring:
+    application:
+        name: SpringBootGraphQL
+    datasource:
+        diver-class-name: com.mysql.cj.jdbc.Driver
+        password: Password123#@!
+        url: jdbc:mysql://localhost:3306/spring_graphql
+        username: root
+    jpa:
+        database-platform: org.hibernate.dialect.MySQLDialect
+        generate-ddl: true
+        show-sql: true
